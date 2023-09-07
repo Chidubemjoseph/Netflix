@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #000;
+    color: #fff;
+}
+/* NAVBAR STYLING STARTS */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-img {
+    width: 3rem;
+    cursor: pointer;
+    margin: 1rem;
+}
+.nav-img-search {
+    width: 2rem;
+    cursor: pointer;
+    margin-left: 1em;
+}
+.nav-link ul {
+    display: flex;
+    gap: 1.5em;
+    margin-left:-35em ;
+    list-style-type: none;
+}
+.nav-link li >a {
+    text-decoration: none;
+    color: #fff;
+}
+/* NAVBAR STYLING ENDS */
+
+/* BODY STYLING STARTS  */
+
+/* BODY STYLING ENDS */

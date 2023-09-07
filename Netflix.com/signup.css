@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-size: cover;
+    background-position: fixed; 
+    position: relative;
+    padding: 10px 8px;
+    height: 100vh;
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 0.8) 60%,rgba(0, 0, 0, 0.8)100%), url('img/heroimg.jpg');
+    color: #ffff;
+    /* background-repeat: no-repeat; */
+}
+
+nav > img{
+    width: 4rem;
+    cursor: pointer;
+    margin: 2rem;
+}
+
+.form-container{
+    margin: auto;
+    max-width: 450px;
+    height: 90vh;
+    background: #000;
+    opacity: 0.6;
+    padding: 30px;
+}
+
+form {
+    padding: 30px;
+    width: 100%;
+}
+
+form h3{
+    text-align: auto;
+    font-size: 2rem;
+    color: red;
+    padding: 1rem 1rem 2rem 2rem;
+}
+
+.form-group {   
+    margin: 15px 0;
+}
+input{
+    border-radius: 3px ;
+    width: 100%;
+    padding: 20px;          
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+button{
+    border-radius: 4px;
+    width: 100%;
+    margin: 25px 0 10px;
+    cursor: pointer;
+    padding: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: red;
+    color: #ffff;
+}
+form .form-help{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.form-help .remember-me{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: start;
+    padding: 0;
+    margin: 0;
+}
+.form-help .remember-me input::after{
+    position: absolute;
+    content: "Remember";
+    display: block;
+    padding-left: 13px;
+    margin: 0;
+    width: 100%;
+    color: #fff;
+}
+.form-help a {
+    text-decoration: none;
+    color: red;
+}
+.form-content h4{
+    padding: 1rem;
+}
+.form-content a{
+    color: red;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* FOOTER STYLING STARTS HERE */
+footer{
+    margin-top: 1rem;
+    padding: 20px 60px;
+}
+.footer{
+    color: #777;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+.footer-header{
+    margin-bottom: 20px;
+}
+.footer-header a {
+    color: #777;
+}
+.footer .row{
+    margin: 30px 200px 30px 0;
+}
+ .footer h3{
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+.footer col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row {
+    display: grid;
+    grid-template-columns: repeat(1, 4fr);
+    align-items: flex-start;
+    padding: 10px 0;
+}
+/* FOOTER STYLING ENDS HERE */

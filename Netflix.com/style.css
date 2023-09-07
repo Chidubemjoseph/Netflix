@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #ffff;
+}
+
+.header {
+    position: relative;
+    height: 100vh;
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 0.8) 60%,rgba(0, 0, 0, 0.8)100%), url('img/heroimg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+
+    
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    /* background-repeat: no-repeat; */
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+nav >img {
+    width: 10rem;
+    cursor: pointer;
+    padding-top: 1rem;
+}
+
+nav button {
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #ffff;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.language-btn{
+    background: transparent;
+    border: 1px solid #ffff;
+    padding: 7px 10px;
+
+}
+.signup-btn >a {
+    text-decoration: none;
+    color: #ffff;
+}
+/* .language-btn img {
+    width: 10px;
+    margin-left: 10px;
+} */
+
+/* STYLING THE HERO CONTENT START  */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hero-content h1 {
+    font-size: 2rem;
+    max-width: 600px;
+}
+.hero-content > p{
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 25px;
+}
+.hero-content h3{
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: none;
+}
+.Email-signup {
+    border-radius: 4px;
+    display: flex-end;
+    align-content: center;
+    margin-top: 20px;
+    align-items: center;
+    overflow: hidden;
+/* 
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+input {
+    flex: 1;
+    border: 1px solid gray;
+    background-color: transparent;
+    padding: 15px 100px;
+    margin-left: 20px;
+    font-size: 1rem;
+}
+button {
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #ffff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+/* STYLING THE HERO CONTENT ENDS */
+
+/* STYLING THE BODY ROW SECTIONN START  */
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    margin: auto;
+    padding: 50px 12px;
+    /* font-size: 22px; */
+}
+.row {
+    display: flex;  
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0; 
+
+    border-radius: 5px;
+}
+.text.col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col > img {
+    display: block;
+    width: 30rem;
+    height: 50vh; 
+    margin: auto;
+}
+.img-col4 > img {
+    display: block;
+    width: 32rem;
+    height: 55vh;
+    margin: auto;
+}
+.container > h2{
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: 20px;
+} 
+hr {
+    border-radius: 6px solidcolor gray;
+}
+/* STYLING THE BODY ROW SECTIONN ENDS */
+
+/* FAQ STYLING STARTS  */
+.faq {
+    padding: 10px 12px;
+    text-align: center;
+    font-size: 18px;
+}
+.faq > h2 {
+    font-weight: 500;
+    font-size: 40px;
+    padding-top: 2rem;
+}
+.accordion {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordion li > label {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+.accordion label:hover {
+    background-color: #181818;
+}
+/* TRANSITIONING STRATS FROM HERE  */ 
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s; /* it links to the rotation of the + sign to trun to x when cliked on */
+}
+input[type="radio"] {
+    display: none; /* this syntax is used to hide the dotted circel in the FAQ */
+}
+.accordion .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s; /* It showes how the answers to the FAQ diaplays () */
+}
+.accordion input[type="radio"]:checked + label + .content {
+    max-height: 600px;
+    padding: 30px 20px;
+    /* border: 1px solid #ccc; */
+    /* border-radius: 5px; */
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(13deg);
+}
+.faq .Email-signup > input {
+    padding: 20px 100px;
+    margin-bottom: 2rem;
+    margin-left: 20px;
+    font-size: 2rem;
+}
+/*  TRANSITIONING ENDSS HERE */
+
+/* FOOTER STYLING STARTS HERE  */
+.Footer {
+    padding: 50px 15px 10px;
+    border-top: 6px solid #303030;
+    color: #777;
+}
+.Footer h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.Footer h3 >a {
+    color: #777;
+    text-decoration: none;
+}
+.Footer .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.Footer .col > a {
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.Footer .row {
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.Footer >button {
+    border-radius: 5px ;
+}
+.Copywrite {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 3rem;
+}
+/* FOOTER STYLING ENDS HERE */
